@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "mobile",
+    "name": "Todo App",
     "slug": "mobile",
     "platforms": [
       "ios",

@@ -1,19 +1,21 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import Routes from './src/routes';
+import { Roboto_400Regular, Roboto_500Medium, useFonts } from '@expo-google-fonts/roboto';
+import { FrancoisOne_400Regular } from '@expo-google-fonts/francois-one';
+import { AppLoading } from 'expo';
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-    </View>
-  );
-}
+  const [fontsLoaded] = useFonts({
+    Roboto_400Regular,
+    FrancoisOne_400Regular,
+    Roboto_500Medium
+  });
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+  if (!fontsLoaded) {
+    return <AppLoading />;
+  };
+
+  return (
+    <Routes />
+  );
+};
