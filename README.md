@@ -1,3 +1,3 @@
 # todo-app
-Todo App simple feito com React Native.
+Todo App simples feito com React Native.
 
